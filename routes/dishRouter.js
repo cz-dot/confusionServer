@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParse = require('body-parser');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authenticate = require('../authenticate');
 
@@ -7,7 +7,7 @@ const Dishes = require('../models/dishes');
 
 const dishRouter = express.Router();
 
-dishRouter.use(bodyParse.json());
+dishRouter.use(bodyParser.json());
 
 dishRouter.route('/')
 .get((req, res, next) => {
